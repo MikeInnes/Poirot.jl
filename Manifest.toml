@@ -56,6 +56,12 @@ git-tree-sha1 = "838a37797ac24c1b4c3353d46ec87ea6598f2308"
 uuid = "31c24e10-a181-5473-b8eb-7969acd0382f"
 version = "0.21.7"
 
+[[ForneyLab]]
+deps = ["Base64", "InteractiveUtils", "LinearAlgebra", "Printf", "SparseArrays", "SpecialFunctions", "Statistics", "Test"]
+git-tree-sha1 = "d5217b068f72fdc943243636acbacb2e05b464b3"
+uuid = "9fc3f58a-c2cc-5bff-9419-6a294fefdca9"
+version = "0.10.0"
+
 [[IRTools]]
 deps = ["InteractiveUtils", "MacroTools", "Test"]
 git-tree-sha1 = "72421971e60917b8cd7737f9577c4f0f87eab306"
