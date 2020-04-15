@@ -4,16 +4,12 @@ using Reexport, Printf, IRTools.All, QuadGK
 @reexport using Distributions
 @reexport using Statistics
 using MacroTools: @forward
+using Mjolnir: @trace
 
 export Rejection
-export infer, observe, @code_xla, xla
+export infer, observe
 
-include("abstract/Abstract.jl")
-using .Abstract
-
-include("lax/LAX.jl")
-using .LAX
-
+include("compiler/trace.jl")
 include("compiler/simplify.jl")
 include("compiler/logprob.jl")
 

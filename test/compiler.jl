@@ -1,5 +1,5 @@
-using Poirot, IRTools, Test
-using Poirot.Abstract: @trace
+using Mjolnir: @trace
+using IRTools
 
 thunk = () -> begin
   x = rand(Uniform(0, 10))

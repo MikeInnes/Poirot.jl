@@ -1,4 +1,5 @@
-using .Abstract: AType, @trace, abstract
+using Mjolnir
+import Mjolnir: Defaults, AType, @trace, abstract
 
 struct ConditionError end
 
@@ -7,7 +8,8 @@ function observe(result::Bool)
   return
 end
 
-Abstract.abstract(::AType{typeof(observe)}, ::AType{Bool}) = Nothing
+abstract(::Basic, ::AType{typeof(observe)}, ::AType{Bool}) = Nothing
+Mjolnir.effectful(::AType{typeof(observe)}, x) = true
 
 struct Multi
   algs::Vector{Any}
@@ -15,7 +17,7 @@ struct Multi
 end
 
 function infer(f, m::Multi)
-  tr = trace(typeof(f))
+  tr = trace(Defaults(), typeof(f))
   for alg in m.algs
     r = infer(f, alg, tr)
     r == nothing || return r

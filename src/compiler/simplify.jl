@@ -12,4 +12,4 @@ function simplify!(ir)
   return ir
 end
 
-trace(Ts...) = simplify!(Abstract.trace(Ts...))
+trace(Ts...) = simplify!(Mjolnir.trace(Ts...))

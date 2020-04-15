@@ -6,7 +6,7 @@
 
 ```julia
 ] add IRTools#master
-] add https://github.com/MikeInnes/XLATools.jl
+] add https://github.com/MikeInnes/Mjolnir.jl
 ] add https://github.com/MikeInnes/Poirot.jl
 ```
 
