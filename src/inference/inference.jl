@@ -17,7 +17,7 @@ struct Multi
 end
 
 function infer(f, m::Multi)
-  tr = trace(Defaults(), typeof(f))
+  tr = trace(typeof(f))
   for alg in m.algs
     r = infer(f, alg, tr)
     r == nothing || return r
